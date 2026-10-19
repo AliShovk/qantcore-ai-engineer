@@ -1,0 +1,18 @@
+# secrets and local state
+.env
+.env.*
+!.env.example
+
+# build artefacts of the site
+*.gz
+*.bak
+*.bak-*
+
+# python
+__pycache__/
+*.pyc
+
+# editors / OS
+.DS_Store
+.idea/
+.vscode/
