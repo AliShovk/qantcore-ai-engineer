@@ -161,6 +161,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
   .top{left:12px;top:14px;font-size:10.5px}.tr{right:10px}#dots{display:none}.pill:has(#dots){display:none}
   .cards,.kinds{grid-template-columns:1fr}
 }
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 </style>
 <script type="importmap">
 { "imports": {
@@ -175,8 +176,19 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
 <meta name="twitter:title" content="AI Инженер — сборка агентской системы без кода">
 <meta name="twitter:description" content="Интерактивные платы агентской системы: клик по детали — API-ключ, замена, настройка.">
 <meta name="twitter:image" content="https://qantcore.space/images/favicon.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Qantcore AI Engineer",
+"alternateName":"AI Инженер","url":"https://qantcore.space/ai-engineer/",
+"applicationCategory":"DeveloperApplication","operatingSystem":"Web",
+"description":"Визуальный конструктор агентских систем: шесть плат, шаблоны, живой запуск с ключами пользователя и экспорт в готовый проект на FastAPI.",
+"offers":{"@type":"Offer","price":"0","priceCurrency":"RUB"},
+"author":{"@type":"Organization","name":"Qantcore","url":"https://qantcore.space/"},
+"license":"https://www.apache.org/licenses/LICENSE-2.0",
+"sameAs":["https://github.com/AliShovk/qantcore-ai-engineer","https://qantcore.space/"]}
+</script>
 </head>
 <body data-theme="light">
+<h1 class="sr-only">AI Инженер — визуальный конструктор агентских систем Qantcore</h1>
 <div id="stage"></div>
 <div class="top"><span class="dot"></span><a class="home" href="https://qantcore.space/">Qantcore</a><span style="color:var(--muted)">/</span><span id="crumb"></span></div>
 <div class="tr">
@@ -198,7 +210,7 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
 </div>
 <div class="info"><h2 id="infoT"></h2><p id="infoX"></p></div>
 <div class="hint" title="клик — настроить · перетащить деталь — переставить · 0–6 платы · R запуск · N словами · D демо · M деталь · P шаблоны · C стоимость · Esc назад">клик — настроить · перетащить деталь — переставить · 0–6 платы · R запуск · N словами · D демо · M деталь · P шаблоны · C стоимость · Esc назад</div>
-<div class="made"><a href="https://qantcore.space/ai-engineer/" title="Первоисточник — Qantcore">Qantcore · AI Инженер</a> · оригинал</div>
+<div class="made"><a href="https://qantcore.space/ai-engineer/" title="Первоисточник — Qantcore">Qantcore · AI Инженер</a> · оригинал · <a href="https://github.com/AliShovk/qantcore-ai-engineer" target="_blank" rel="noopener" title="Исходный код (Apache-2.0)">код</a></div>
 <div id="stat"></div>
 <div id="toast"></div>
 <div id="run">
