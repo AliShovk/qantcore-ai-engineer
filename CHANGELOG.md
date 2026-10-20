@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0 — 2026-10-20
+
+- Unit tests: 31 for the app (`node --test`) and 12 for the runtime (`unittest`), both wired into CI.
+- README: hero screenshot, architecture diagram, four screenshots, tests section, badges.
+- CI: runs the test suites and the runtime import check, not just syntax.
+
 ## 1.0.0 — 2026-10-19
 
 First public snapshot of the builder that runs at https://qantcore.space/ai-engineer/.

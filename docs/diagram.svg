@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-label="Как устроен Qantcore AI Engineer: платы собираются в agent.json, экспортируются в ZIP и запускаются как FastAPI-агент">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4ade80"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0d12"/>
+      <stop offset="1" stop-color="#101822"/>
+    </linearGradient>
+    <style>
+      .t{font-family:'DejaVu Sans',Inter,system-ui,sans-serif}
+      .h{fill:#e8eef7;font-size:17px;font-weight:700}
+      .s{fill:#8b97a8;font-size:12.5px}
+      .k{fill:#4ade80;font-size:11px;letter-spacing:1.6px;font-weight:700}
+      .n{fill:#111823;stroke:#26313f;stroke-width:1.5}
+      .n.hot{fill:#0f1a16;stroke:#4ade80;stroke-opacity:.55}
+      .ln{stroke:#2c3a4b;stroke-width:2;fill:none}
+      .ln.hot{stroke:#4ade80;stroke-opacity:.7}
+    </style>
+  </defs>
+  <rect width="960" height="420" fill="url(#bg)"/>
+  <g opacity=".5">
+    <path d="M0 60H960M0 120H960M0 180H960M0 240H960M0 300H960M0 360H960" stroke="#131a24"/>
+    <path d="M60 0V420M120 0V420M180 0V420M240 0V420M300 0V420M360 0V420M420 0V420M480 0V420M540 0V420M600 0V420M660 0V420M720 0V420M780 0V420M840 0V420M900 0V420" stroke="#131a24"/>
+  </g>
+  <rect x="0" y="0" width="960" height="5" fill="#4ade80"/>
+
+  <text class="k t" x="48" y="52">КАК ЭТО РАБОТАЕТ</text>
+  <text class="h t" x="48" y="86" style="font-size:24px">От схемы на платах до запускаемого агента</text>
+
+  <!-- 1. boards -->
+  <g>
+    <rect class="n hot" x="48" y="128" width="196" height="212" rx="14"/>
+    <text class="h t" x="68" y="158">6 плат</text>
+    <text class="s t" x="68" y="182">каналы · контроль</text>
+    <text class="s t" x="68" y="202">оркестратор · ядро LLM</text>
+    <text class="s t" x="68" y="222">память · инструменты</text>
+    <text class="s t" x="68" y="262">100+ деталей, каждая</text>
+    <text class="s t" x="68" y="282">с провайдерами и полями</text>
+    <text class="s t" x="68" y="318" style="fill:#4ade80">клик по детали → ключ</text>
+  </g>
+  <path class="ln hot" d="M252 234 H300" marker-end="url(#arrow)"/>
+
+  <!-- 2. agent.json -->
+  <g>
+    <rect class="n" x="308" y="158" width="164" height="152" rx="14"/>
+    <text class="h t" x="328" y="188">agent.json</text>
+    <text class="s t" x="328" y="212">вся схема:</text>
+    <text class="s t" x="328" y="232">платы, детали,</text>
+    <text class="s t" x="328" y="252">связи, секреты</text>
+    <text class="s t" x="328" y="284" style="fill:#4ade80">${ENV}-плейсхолдеры</text>
+  </g>
+  <path class="ln" d="M480 234 H528" marker-end="url(#arrow)"/>
+
+  <!-- 3. export -->
+  <g>
+    <rect class="n" x="536" y="128" width="180" height="212" rx="14"/>
+    <text class="h t" x="556" y="158">ZIP-экспорт</text>
+    <text class="s t" x="556" y="182">runtime/ · Dockerfile</text>
+    <text class="s t" x="556" y="202">docker-compose.yml</text>
+    <text class="s t" x="556" y="222">.env.example · knowledge/</text>
+    <text class="s t" x="556" y="242">README.md</text>
+    <text class="s t" x="556" y="262">ORIGIN.txt</text>
+    <text class="s t" x="556" y="300" style="fill:#4ade80">собирается в браузере</text>
+    <text class="s t" x="556" y="320">без сервера и зависимостей</text>
+  </g>
+  <path class="ln hot" d="M724 234 H772" marker-end="url(#arrow)"/>
+
+  <!-- 4. runtime -->
+  <g>
+    <rect class="n hot" x="780" y="128" width="132" height="212" rx="14"/>
+    <text class="h t" x="798" y="158">Агент</text>
+    <text class="s t" x="798" y="182">FastAPI</text>
+    <text class="s t" x="798" y="206">/api/chat</text>
+    <text class="s t" x="798" y="226">веб-чат</text>
+    <text class="s t" x="798" y="246">telegram</text>
+    <text class="s t" x="798" y="266">webhook</text>
+    <text class="s t" x="798" y="300" style="fill:#4ade80">docker compose</text>
+    <text class="s t" x="798" y="320">up -d</text>
+  </g>
+
+  <!-- нижняя полоса: провайдеры и инструменты -->
+  <path class="ln" d="M846 340 V372 H148 V340" stroke-dasharray="5 5"/>
+  <text class="s t" x="48" y="400">LLM: OpenAI-совместимые · Anthropic · YandexGPT (beta)   ·   Инструменты: web_search · fetch_url · call_api · search_knowledge</text>
+</svg>

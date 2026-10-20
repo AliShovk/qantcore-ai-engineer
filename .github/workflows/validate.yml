@@ -18,17 +18,23 @@ jobs:
       - name: JavaScript syntax (ES modules)
         run: |
           set -e
-          for f in *.js; do
-            echo "checking $f"
-            node --input-type=module --check < "$f"
-          done
+          for f in *.js; do node --input-type=module --check < "$f"; done
+
+      - name: Unit tests (JS)
+        run: node --test test-ai-engineer.mjs
 
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Python runtime compiles
+      - name: Install runtime deps
+        run: pip install fastapi uvicorn httpx
+
+      - name: Runtime import check
         run: python3 -m py_compile runtime/*.py
+
+      - name: Unit tests (runtime)
+        run: python3 -m unittest runtime.test_runtime -v
 
       - name: No site-only dependencies leaked in
         run: |

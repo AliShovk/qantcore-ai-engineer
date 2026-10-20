@@ -11,6 +11,15 @@ python3 -m http.server 8080
 
 The page must be served over HTTP — ES modules do not load from `file://`.
 
+## Tests
+
+```bash
+node --test test-ai-engineer.mjs          # 31 tests
+python3 -m unittest runtime.test_runtime  # 12 tests (needs fastapi, httpx)
+```
+
+Run both before opening a pull request. CI runs them on every push.
+
 ## What is welcome
 
 - Bug reports with a reproduce path (browser, steps, expected/actual).
